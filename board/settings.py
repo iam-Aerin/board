@@ -105,9 +105,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# 한국어 설정으로 변경 (admin페이지에서 확인 가능)
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+# 기본값 `UTC`를 한국 서버 시간으로 변경
+TIME_ZONE = 'Asia/seoul'
 
 USE_I18N = True
 
