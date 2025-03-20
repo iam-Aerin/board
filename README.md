@@ -125,51 +125,6 @@ first_pjt/
 2. `views.py` 수정 - 화면 로직 처리
 3. `templates/` 폴더에 `HTML` 추가 - 템플릿 렌더링
 
-### 예제
-
-#### `first_app/urls.py`
-```python
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('', views.index, name='index'),
-]
-```
-
-#### `first_app/views.py`
-```python
-from django.shortcuts import render
-
-def index(request):
-    return render(request, 'index.html')
-```
-
-#### `first_app/templates/index.html`
-```html
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django 첫 페이지</title>
-</head>
-<body>
-    <h1>환영합니다! Django 프로젝트입니다.</h1>
-</body>
-</html>
-```
-
-#### `first_pjt/urls.py` 수정
-```python
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('first_app.urls')),
-]
-```
 
 ---
 
@@ -179,6 +134,9 @@ urlpatterns = [
 - **앱 생성** 및 `settings.py`에 등록
 - `urls.py` → `views.py` → `templates/` 흐름으로 개발 진행
 
+
 `python manage.py makemigrations`
 `python manage.py migration`
 sql 세상으로 python 코드들을 보내줌.
+
+`admin.py` 파일에 내용을 적고 `python manage.py createsuperuser` 로 계정을 생성함 => url접속후 /admin 으로 페이지에 접속하고 관리자 모드로 게시물을 관리
