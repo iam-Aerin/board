@@ -6,8 +6,23 @@ from django.urls import path
 from . import views
 # 현재 폴더에 있는 views를 가져와요. 
 
+app_name = 'articles'
+# 지금 app이 하나 여서 파악이 쉽지만
+# 만일, app이 여러개 생기고, 그 안에도 detail이라는 이름을 가진 경로가 있다면
+# 헷갈릴 수 있기 때문에
+# app_name 설정까지 추가해줌.
+
+# => base.html에 nav가 동작하게끔 넣어줌. 
+#  <a class="navbar-brand" href="{% url 'articles: index' %}">  이 부분
+
 urlpatterns = [
-    path('', views.index)
+    # index = 'articles/' python 스럽게 표현해보자면 
+
+    path('', views.index, name='index'),
+    # name뒤에는 경로에 대한 이름을 지정해줌
+    # 유지보수를 편하게 하기 위해서
+    path('<int:id>/', views.detail, name='detail'),
     # ''비어 있는 string=> articles경로를 포함하고 있구나.
     # views.py 파일에 이제 함수를 넣어줄 것임. 
 ]
+

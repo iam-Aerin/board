@@ -12,6 +12,7 @@ BASE_DIR / 'templates' -->
         <tr>
             <th>제목</th>
             <th>내용</th>
+            <th>링크</th>
         </tr>
       </thead>
       <tbody>
@@ -20,7 +21,8 @@ BASE_DIR / 'templates' -->
         <tr>
             <td>{{article.title}}</td>
              <td>{{article.content}}</td>
-        </tr>
+             <td><a href="{% url 'articles:detail' article.id %}" class="btn btn-primary">🫶detail</a></td>
+            </tr>
         {% endfor %}
       </tbody>  
     </table>
