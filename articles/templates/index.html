@@ -1,0 +1,10 @@
+<!-- html 기본 구조의 반복을 줄이기 위해 새로운 templates 라는 이름의 폴더를 외부에 생성하고, 그 안에 `base.html` 파일을 만들어줌. 
+ settings.py에 templates 설정을 넣어줌
+ settings.py => `TEMPLATES`의    `DIRS` 를 
+BASE_DIR / 'templates' -->
+ 
+  {% extends 'base.html' %}
+
+  {% block body %}
+  <h1>index</h1>
+  {% endblock %}

@@ -55,7 +55,8 @@ ROOT_URLCONF = 'board.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
+        # 설정값: 내가 새로 만든 base.html이 든 경로도 찾아주라고 넣어줌.
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
