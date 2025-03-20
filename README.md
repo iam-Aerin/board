@@ -75,11 +75,11 @@ python manage.py runserver
 ## 2. 앱 생성 및 설정
 
 ### 앱 생성
-```sh
+```shell
 django-admin startapp <app-name>
 ```
 예시:
-```sh
+```shell
 django-admin startapp first_app
 ```
 

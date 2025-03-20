@@ -6,5 +6,22 @@ BASE_DIR / 'templates' -->
   {% extends 'base.html' %}
 
   {% block body %}
-  <h1>index</h1>
+   
+    <table class="table">
+      <thead>
+        <tr>
+            <th>제목</th>
+            <th>내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for article in articles%}
+        <!-- article의 수만큼 반복 (articles는 views.py의 변수 articles ) -->
+        <tr>
+            <td>{{article.title}}</td>
+             <td>{{article.content}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>  
+    </table>
   {% endblock %}
