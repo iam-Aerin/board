@@ -178,3 +178,7 @@ urlpatterns = [
 - Django 설치 후 **프로젝트 생성**
 - **앱 생성** 및 `settings.py`에 등록
 - `urls.py` → `views.py` → `templates/` 흐름으로 개발 진행
+
+`python manage.py makemigrations`
+`python manage.py migration`
+sql 세상으로 python 코드들을 보내줌.
