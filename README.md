@@ -10,9 +10,15 @@ README.md 작성하는 습관 들이기
 1. Django 프로젝트
 django 설치
 pip install django
+
+git init
+git add .
+git commit -m "내용"
+
 프로젝트 생성
 django-admin startproject <pjt-name> <path>
 django-admin startproject first_pjt .` : 프로젝트의 이름이 first_pjt고 그걸 현재 폴더에 만들거야 (.)
+- 프로젝트의 이름은 보통 서비스의 이름으로 짓기
 
 서버 실행 (종료: ctrl + c)
 python manage.py runserver
