@@ -17,6 +17,7 @@ app_name = 'articles'
 
 urlpatterns = [
     # index = 'articles/' python 스럽게 표현해보자면 
+# Read
 
     path('', views.index, name='index'),
     # name뒤에는 경로에 대한 이름을 지정해줌
@@ -24,5 +25,9 @@ urlpatterns = [
     path('<int:id>/', views.detail, name='detail'),
     # ''비어 있는 string=> articles경로를 포함하고 있구나.
     # views.py 파일에 이제 함수를 넣어줄 것임. 
+
+# Create
+    path('new/', views.new, name='new'),
+    path('create/', views.create, name='create'), 
 ]
 
